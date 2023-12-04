@@ -28,14 +28,14 @@ for div in results:
     h2_tag = div.find('h2')
     target_span = div.find('span', class_='tMeterScore')
     if h2_tag:
-        rspan = h2_tag.find("span")
+        rspan = h2_tag.find("span", class_="subtle start-year")
         year = rspan.get_text(strip=True)
-        year = int(year[1:-1])
         ra = h2_tag.find('a')
         title = ra.get_text(strip=True)
         score = target_span.get_text(strip=True)
         score = int(score[:-1])
-        movie_info = title, year, score
+        xyear = year[1:-1]
+        movie_info = title, xyear, score
         title_list.append(movie_info)
                 
 # add movie titles, years, and local id to database
@@ -61,7 +61,7 @@ def add_rt_data_to_database(title_list, conn, cur):
     conn.commit()
     print(added_count)
     return added_count
-
-add_rt_data_to_database(title_list, conn, cur)   
+for i in range(6):
+    add_rt_data_to_database(title_list, conn, cur)   
 
 

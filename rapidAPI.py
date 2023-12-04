@@ -67,7 +67,8 @@ def create_rapid_api_json():
         file_path = 'output.json'
         with open(file_path, 'w') as json_file:
             json.dump(return_dict, json_file, indent=4)
-            
+        
+        json_file.close()    
         return return_dict
 
 rapid_api_data = create_rapid_api_json()

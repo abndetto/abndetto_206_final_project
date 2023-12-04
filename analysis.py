@@ -49,7 +49,7 @@ rapi_data = {'Title': rapi_titles, 'Year': rapi_years, 'Rated': rapi_rated, 'Rel
 rapi_df = pd.DataFrame(rapi_data)
 
 # rapi_df is the rapid api dataframe
-# print(rapi_df)
+print(rapi_df)
 
 
 # create rotten tomatoes dataframe 
@@ -64,13 +64,13 @@ rt_df = pd.DataFrame(rt_data)
 rt_movies_by_year = rt_df.groupby('Year').size().reset_index(name='Number of Movies')
 
 # Plotting Rotten Tomato Data (number of movies that recieved 90+ score by year)
-# plt.figure(figsize=(10, 6))
-# plt.bar(rt_movies_by_year['Year'], rt_movies_by_year['Number of Movies'], color='skyblue')
-# plt.xlabel('Year')
-# plt.ylabel('Number of Movies')
-# plt.title('Number of Movies by Year With Rotten Tomatoes Score 90 or Higher')
-# plt.grid(axis='y')
-# plt.show()
+plt.figure(figsize=(10, 6))
+plt.bar(rt_movies_by_year['Year'], rt_movies_by_year['Number of Movies'], color='skyblue')
+plt.xlabel('Year')
+plt.ylabel('Number of Movies')
+plt.title('Number of Movies by Year With Rotten Tomatoes Score 90 or Higher')
+plt.grid(axis='y')
+plt.show()
 
 def get_measurements_and_genres(cur):
     return_list = []
@@ -88,10 +88,6 @@ def get_measurements_and_genres(cur):
     avg_metascore_by_genre = gg_df.groupby('Genre').mean()
     print(avg_metascore_by_genre)
     return avg_metascore_by_genre
-
-
-get_measurements_and_genres(cur)
-
 
 
 
@@ -113,4 +109,19 @@ def get_measurements_and_countries(cur):
     return avg_metascore_by_country
 
 
-get_measurements_and_countries(cur)
+
+
+# with open('calculated_data_text.txt', 'w') as file:
+x = get_measurements_and_countries(cur)
+y = get_measurements_and_genres(cur)
+z = rt_movies_by_year
+
+xyzlist = [x, y, z]
+
+for num in xyzlist:
+    num = num.to_string()        
+    with open('calculationsText.txt', 'a') as file:
+        file.write(num)
+        file.write('\n')
+        
+file.close()
