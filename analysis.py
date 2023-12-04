@@ -64,11 +64,53 @@ rt_df = pd.DataFrame(rt_data)
 rt_movies_by_year = rt_df.groupby('Year').size().reset_index(name='Number of Movies')
 
 # Plotting Rotten Tomato Data (number of movies that recieved 90+ score by year)
-plt.figure(figsize=(10, 6))
-plt.bar(rt_movies_by_year['Year'], rt_movies_by_year['Number of Movies'], color='skyblue')
-plt.xlabel('Year')
-plt.ylabel('Number of Movies')
-plt.title('Number of Movies by Year With Rotten Tomatoes Score 90 or Higher')
-plt.grid(axis='y')
-plt.show()
+# plt.figure(figsize=(10, 6))
+# plt.bar(rt_movies_by_year['Year'], rt_movies_by_year['Number of Movies'], color='skyblue')
+# plt.xlabel('Year')
+# plt.ylabel('Number of Movies')
+# plt.title('Number of Movies by Year With Rotten Tomatoes Score 90 or Higher')
+# plt.grid(axis='y')
+# plt.show()
 
+def get_measurements_and_genres(cur):
+    return_list = []
+    cur.execute('SELECT Rapid_API.title, Rapid_API.metascore, Rapid_API.year, Genres.genre FROM Rapid_API JOIN Genres ON Rapid_API.genre = Genres.id')
+    for rval in cur:
+        rx = (rval[0], rval[1], rval[2], rval[3])
+        return_list.append(rx)
+
+    genres_genre = [movie[3] for movie in return_list]
+    genres_metascore = [movie[1] for movie in return_list]
+    genre_data = {'Genre': genres_genre, 'Metascore': genres_metascore}
+    gg_df = pd.DataFrame(genre_data)
+    gg_df['Metascore'] = pd.to_numeric(gg_df['Metascore'], errors='coerce')
+    gg_df = gg_df.dropna(subset=['Metascore'])
+    avg_metascore_by_genre = gg_df.groupby('Genre').mean()
+    print(avg_metascore_by_genre)
+    return avg_metascore_by_genre
+
+
+get_measurements_and_genres(cur)
+
+
+
+
+def get_measurements_and_countries(cur):
+    return_list = []
+    cur.execute('SELECT Rapid_API.title, Rapid_API.metascore, Rapid_API.year, MovieCountries.country FROM Rapid_API JOIN MovieCountries ON Rapid_API.country = MovieCountries.id')
+    for rval in cur:
+        rx = (rval[0], rval[1], rval[2], rval[3])
+        return_list.append(rx)
+        
+    countries_country = [movie[3] for movie in return_list]
+    country_metascore = [movie[1] for movie in return_list]
+    country_data = {'Country': countries_country, 'Metascore': country_metascore}
+    cc_df = pd.DataFrame(country_data)
+    cc_df['Metascore'] = pd.to_numeric(cc_df['Metascore'], errors='coerce')
+    cc_df = cc_df.dropna(subset=['Metascore'])
+    avg_metascore_by_country = cc_df.groupby('Country').mean()
+    print(avg_metascore_by_country)
+    return avg_metascore_by_country
+
+
+get_measurements_and_countries(cur)
