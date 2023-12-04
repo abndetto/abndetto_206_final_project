@@ -17,7 +17,7 @@ cur = conn.cursor()
 
 
 
-# get list of movie titles from Rotten Tomatoes website
+# get list of movie titles from Rotten Tomatoes website using BeautifulSoup
 url = "https://editorial.rottentomatoes.com/guide/essential-movies-to-watch-now/"
 
 query = requests.get(url) 
@@ -38,9 +38,7 @@ for div in results:
         movie_info = title, year, score
         title_list.append(movie_info)
                 
-# print(title_list)
-# print(len(title_list))
-
+# add movie titles, years, and local id to database
 def add_rt_data_to_database(title_list, conn, cur):
     added_count = 0
     cur.execute("CREATE TABLE IF NOT EXISTS Rotten_Tomatoes (title TEXT PRIMARY KEY, id INTEGER, year INTEGER, score INTEGER)")
@@ -64,7 +62,6 @@ def add_rt_data_to_database(title_list, conn, cur):
     print(added_count)
     return added_count
 
-for num in range(6):
-    add_rt_data_to_database(title_list, conn, cur)   
+add_rt_data_to_database(title_list, conn, cur)   
 
 

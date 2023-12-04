@@ -16,6 +16,8 @@ conn = sqlite3.connect(path + "/" + db_name)
 cur = conn.cursor()
 
 # plug in move titles to movie api
+# returns a dictionary of movie titles (keys) and associated values (ratings, years, run time, etc)
+# creates a json file to store the returned values
 def create_rapid_api_json():
     if os.path.exists('output.json'):
         with open('output.json', 'r') as json_file:
@@ -69,8 +71,9 @@ def create_rapid_api_json():
         return return_dict
 
 rapid_api_data = create_rapid_api_json()
-# print(len(rapid_api_data))
 
+
+# create tables for genre, movie rating (pg-13, r, etc), and country (USA, UK, etc)
 def set_up_types_tables(json_data, cur, conn):
     # create genre table
     genre_list = []
@@ -110,6 +113,7 @@ def set_up_types_tables(json_data, cur, conn):
         
     conn.commit()
     
+    
     # create country table
     country_list = []
     for movie in json_data.keys():
@@ -129,9 +133,13 @@ def set_up_types_tables(json_data, cur, conn):
         cur.execute(
             "INSERT OR IGNORE INTO MovieCountries (id,country) VALUES (?,?)", (i, country_list[i])
         )
+    pass
 
 set_up_types_tables(rapid_api_data, cur, conn)
 
+
+# add rapid api data to database
+# prints the number of movies added to the database
 def add_rapidapi_data_to_database(movie_dict, conn, cur):
     added_count = 0
     cur.execute("CREATE TABLE IF NOT EXISTS Rapid_API (title TEXT PRIMARY KEY, id INTEGER, year INTEGER, rated TEXT, released TEXT, runtime INTEGER, genre TEXT, country TEXT, awards TEXT, boxoffice TEXT, imdbRating INTEGER, metascore INTEGER)")
@@ -195,7 +203,7 @@ def add_rapidapi_data_to_database(movie_dict, conn, cur):
 
     conn.commit()
     print(added_count)
-    return added_count
+    return None
 
 add_rapidapi_data_to_database(rapid_api_data, conn, cur)
     

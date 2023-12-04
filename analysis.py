@@ -11,6 +11,7 @@ cur = conn.cursor()
 
 
 # get data from Rotten Tomatoes table in database
+# only takes values of movies with a rating of 90 or higher
 def get_rotten_tomatoes_data_score_over_90(cur):
     return_list = []
     cur.execute('SELECT title, id, year FROM Rotten_Tomatoes WHERE score >= 90')
@@ -20,7 +21,7 @@ def get_rotten_tomatoes_data_score_over_90(cur):
 
     return return_list
 
-# get data from rapid api
+# get all data from rapid api table in database
 def get_rapid_api_data(cur):
     return_list = []
     cur.execute('SELECT title, id, year, rated, released, runtime, genre, country, awards, boxoffice,imdbRating,metascore FROM Rapid_API')
@@ -30,7 +31,7 @@ def get_rapid_api_data(cur):
         
     return return_list
 
-
+# craete rapid api dataframe
 rapi_data = get_rapid_api_data(cur)
 rapi_titles = [movie[1] for movie in rapi_data]
 rapi_years = [movie[2] for movie in rapi_data]
@@ -47,10 +48,11 @@ rapi_metascore = [movie[11] for movie in rapi_data]
 rapi_data = {'Title': rapi_titles, 'Year': rapi_years, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore}
 rapi_df = pd.DataFrame(rapi_data)
 
-print(rapi_df)
+# rapi_df is the rapid api dataframe
+# print(rapi_df)
 
 
-# print data pulled from database
+# create rotten tomatoes dataframe 
 rt_data = get_rotten_tomatoes_data_score_over_90(cur)
 
 # add titles to dataframe and print
@@ -61,12 +63,12 @@ rt_df = pd.DataFrame(rt_data)
 
 rt_movies_by_year = rt_df.groupby('Year').size().reset_index(name='Number of Movies')
 
-# Plotting Rotten Tomato Data
-# plt.figure(figsize=(10, 6))
-# plt.bar(rt_movies_by_year['Year'], rt_movies_by_year['Number of Movies'], color='skyblue')
-# plt.xlabel('Year')
-# plt.ylabel('Number of Movies')
-# plt.title('Number of Movies by Year With Rotten Tomatoes Score 90 or Higher')
-# plt.grid(axis='y')
-# plt.show()
+# Plotting Rotten Tomato Data (number of movies that recieved 90+ score by year)
+plt.figure(figsize=(10, 6))
+plt.bar(rt_movies_by_year['Year'], rt_movies_by_year['Number of Movies'], color='skyblue')
+plt.xlabel('Year')
+plt.ylabel('Number of Movies')
+plt.title('Number of Movies by Year With Rotten Tomatoes Score 90 or Higher')
+plt.grid(axis='y')
+plt.show()
 
