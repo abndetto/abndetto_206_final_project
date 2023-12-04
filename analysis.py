@@ -3,6 +3,7 @@ import time
 import sqlite3
 import os
 import pandas as pd 
+import matplotlib.pyplot as plt
 
 # connect to database
 database_name = "Practice_DB"
@@ -30,5 +31,14 @@ rt_years = [movie[2] for movie in rt_data]
 rt_data = {'Title': rt_titles, 'Year': rt_years}
 df = pd.DataFrame(rt_data)
 
-# Print the DataFrame
-display(df)
+rt_movies_by_year = df.groupby('Year').size().reset_index(name='Number of Movies')
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.bar(rt_movies_by_year['Year'], rt_movies_by_year['Number of Movies'], color='skyblue')
+plt.xlabel('Year')
+plt.ylabel('Number of Movies')
+plt.title('Number of Movies by Year')
+plt.grid(axis='y')
+plt.show()
+
