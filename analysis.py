@@ -2,6 +2,9 @@ import sqlite3
 import os
 import pandas as pd 
 import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
 
 # connect to database
 database_name = "Practice_DB"
@@ -47,9 +50,16 @@ rapi_metascore = [movie[11] for movie in rapi_data]
 
 rapi_data = {'Title': rapi_titles, 'Year': rapi_years, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore}
 rapi_df = pd.DataFrame(rapi_data)
+heatmap_df = rapi_df[['Year', 'Runtime', 'IMDB Rating', 'Metascore']]
+heatmap_df = heatmap_df.replace('N/A', pd.NA).dropna()
+heatmap_df['Year'] = pd.to_numeric(heatmap_df['Year'], errors='coerce')
+heatmap_df['Runtime'] = pd.to_numeric(heatmap_df['Runtime'], errors='coerce')
+heatmap_df['IMDB Rating'] = pd.to_numeric(heatmap_df['IMDB Rating'], errors='coerce')
+heatmap_df['Metascore'] = pd.to_numeric(heatmap_df['Metascore'], errors='coerce')
 
-# rapi_df is the rapid api dataframe
-print(rapi_df)
+plt.figure(figsize=(8, 6))
+sns.heatmap(heatmap_df, annot=True, cmap='viridis', fmt=".1f", linewidths=.5, cbar_kws={"shrink": 0.8})
+plt.show()
 
 
 # create rotten tomatoes dataframe 
@@ -86,7 +96,6 @@ def get_measurements_and_genres(cur):
     gg_df['Metascore'] = pd.to_numeric(gg_df['Metascore'], errors='coerce')
     gg_df = gg_df.dropna(subset=['Metascore'])
     avg_metascore_by_genre = gg_df.groupby('Genre').mean()
-    print(avg_metascore_by_genre)
     return avg_metascore_by_genre
 
 
@@ -105,7 +114,6 @@ def get_measurements_and_countries(cur):
     cc_df['Metascore'] = pd.to_numeric(cc_df['Metascore'], errors='coerce')
     cc_df = cc_df.dropna(subset=['Metascore'])
     avg_metascore_by_country = cc_df.groupby('Country').mean()
-    print(avg_metascore_by_country)
     return avg_metascore_by_country
 
 
@@ -114,14 +122,16 @@ def get_measurements_and_countries(cur):
 # with open('calculated_data_text.txt', 'w') as file:
 x = get_measurements_and_countries(cur)
 y = get_measurements_and_genres(cur)
-z = rt_movies_by_year
+x = x.to_string()
+y = y.to_string()
 
-xyzlist = [x, y, z]
-
-for num in xyzlist:
-    num = num.to_string()        
-    with open('calculationsText.txt', 'a') as file:
-        file.write(num)
-        file.write('\n')
-        
-file.close()
+with open('calculationsText.txt', 'w') as file:
+    file.write("Calculated the average metascore by movie country of origin")
+    file.write('\n')
+    file.write(x)
+    file.write('\n')
+    file.write("Calculated the average metascore by movie genre")
+    file.write('\n')
+    file.write(y)
+    file.close()
+    
