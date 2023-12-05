@@ -50,12 +50,13 @@ rapi_metascore = [movie[11] for movie in rapi_data]
 
 rapi_data = {'Title': rapi_titles, 'Year': rapi_years, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore}
 rapi_df = pd.DataFrame(rapi_data)
-heatmap_df = rapi_df[['Year', 'Runtime', 'IMDB Rating', 'Metascore']]
-heatmap_df = heatmap_df.replace('N/A', pd.NA).dropna()
-heatmap_df['Year'] = pd.to_numeric(heatmap_df['Year'], errors='coerce')
-heatmap_df['Runtime'] = pd.to_numeric(heatmap_df['Runtime'], errors='coerce')
-heatmap_df['IMDB Rating'] = pd.to_numeric(heatmap_df['IMDB Rating'], errors='coerce')
-heatmap_df['Metascore'] = pd.to_numeric(heatmap_df['Metascore'], errors='coerce')
+
+# heatmap_df = rapi_df[['Year', 'Runtime', 'IMDB Rating', 'Metascore']]
+# heatmap_df = heatmap_df.replace('N/A', pd.NA).dropna()
+# heatmap_df['Year'] = pd.to_numeric(heatmap_df['Year'], errors='coerce')
+# heatmap_df['Runtime'] = pd.to_numeric(heatmap_df['Runtime'], errors='coerce')
+# heatmap_df['IMDB Rating'] = pd.to_numeric(heatmap_df['IMDB Rating'], errors='coerce')
+# heatmap_df['Metascore'] = pd.to_numeric(heatmap_df['Metascore'], errors='coerce')
 
 plt.figure(figsize=(8, 6))
 sns.heatmap(heatmap_df, annot=True, cmap='viridis', fmt=".1f", linewidths=.5, cbar_kws={"shrink": 0.8})
