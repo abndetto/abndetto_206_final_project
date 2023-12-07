@@ -80,6 +80,15 @@ rapid_api_data = create_rapid_api_json("21159c5c23msha7c9e5999b522ebp1fc04djsn9f
 
 
 # create tables for genre, movie rating (pg-13, r, etc), and country (USA, UK, etc)
+# Inputs: json data as a dictionary, database cursor object, database connection object
+# Outputs: None
+
+# explanation: set_up_types_tables takes a json dictionary, database cursor object, and database connection object and creates
+# three tables: Genres, Rated, and MovieCountries in the database. The function first creates the Genres table. 
+# It then loops through the json dictionary and adds each genre to a list. The function then loops through the list and adds
+# each genre to the Genres table. The function then repeats this process for the Rated and MovieCountries tables.
+# The function commits the changes to the database and returns None.
+# No duplicate values are added to the tables and each value in each table recieves an ID number.
 def set_up_types_tables(json_data, cur, conn):
     # create genre table
     genre_list = []
@@ -143,9 +152,13 @@ def set_up_types_tables(json_data, cur, conn):
 
 set_up_types_tables(rapid_api_data, cur, conn)
 
-
-# add rapid api data to database
-# prints the number of movies added to the database
+# Inputs: json data as a dictionary, database cursor object, database connection object
+# Outputs: None (but prints out the number of added values to the database)
+# Explanation: add_rapidapi_data_to_database adds the movie information from the json dictionary to the database. It first creates a 
+# table called Rapid_API. It then loops through the json dictionary and checks if the movie title is in the dictionary.
+# If the movie title is in the dictionary, the function checks if the movie title is in the database. If the movie title
+# is not in the database, the function adds the movie title, id, year, rating, released, runtime, genre, country, awards, box office, IMDB rating, and metascore to the database.
+# The function then commits the changes to the database and returns None. It prints out the number of added items. 
 def add_rapidapi_data_to_database(movie_dict, conn, cur):
     added_count = 0
     cur.execute("CREATE TABLE IF NOT EXISTS Rapid_API (title TEXT PRIMARY KEY, id INTEGER, year INTEGER, rated TEXT, released TEXT, runtime INTEGER, genre TEXT, country TEXT, awards TEXT, boxoffice TEXT, imdbRating INTEGER, metascore INTEGER)")
