@@ -51,32 +51,23 @@ rapi_metascore = [movie[11] for movie in rapi_data]
 rapi_data = {'Title': rapi_titles, 'Year': rapi_years, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore}
 rapi_df = pd.DataFrame(rapi_data)
 
-# heatmap_df = rapi_df[['Year', 'Runtime', 'IMDB Rating', 'Metascore']]
-# heatmap_df = heatmap_df.replace('N/A', pd.NA).dropna()
-# heatmap_df['Year'] = pd.to_numeric(heatmap_df['Year'], errors='coerce')
-# heatmap_df['Runtime'] = pd.to_numeric(heatmap_df['Runtime'], errors='coerce')
-# heatmap_df['IMDB Rating'] = pd.to_numeric(heatmap_df['IMDB Rating'], errors='coerce')
-# heatmap_df['Metascore'] = pd.to_numeric(heatmap_df['Metascore'], errors='coerce')
-
-plt.figure(figsize=(8, 6))
-sns.heatmap(heatmap_df, annot=True, cmap='viridis', fmt=".1f", linewidths=.5, cbar_kws={"shrink": 0.8})
-plt.show()
-
-
 # create rotten tomatoes dataframe 
 rt_data = get_rotten_tomatoes_data_score_over_90(cur)
 
 # add titles to dataframe and print
-rt_titles = [movie[0] for movie in rt_data]
-rt_years = [movie[2] for movie in rt_data]
-rt_data = {'Title': rt_titles, 'Year': rt_years}
-rt_df = pd.DataFrame(rt_data)
 
-rt_movies_by_year = rt_df.groupby('Year').size().reset_index(name='Number of Movies')
+def rt_movies_by_year(rt_data):
+    rt_titles = [movie[0] for movie in rt_data]
+    rt_years = [movie[2] for movie in rt_data]
+    rt_data = {'Title': rt_titles, 'Year': rt_years}
+    rt_df = pd.DataFrame(rt_data)
+    return_series = rt_df.groupby('Year').size().reset_index(name='Number of Movies')
+    return return_series
 
 # Plotting Rotten Tomato Data (number of movies that recieved 90+ score by year)
+rt_movies_over_90_by_year = rt_movies_by_year(rt_data)
 plt.figure(figsize=(10, 6))
-plt.bar(rt_movies_by_year['Year'], rt_movies_by_year['Number of Movies'], color='skyblue')
+plt.bar(rt_movies_over_90_by_year['Year'], rt_movies_over_90_by_year['Number of Movies'], color='skyblue')
 plt.xlabel('Year')
 plt.ylabel('Number of Movies')
 plt.title('Number of Movies by Year With Rotten Tomatoes Score 90 or Higher')
@@ -98,8 +89,6 @@ def get_measurements_and_genres(cur):
     gg_df = gg_df.dropna(subset=['Metascore'])
     avg_metascore_by_genre = gg_df.groupby('Genre').mean()
     return avg_metascore_by_genre
-
-
 
 def get_measurements_and_countries(cur):
     return_list = []
@@ -123,8 +112,12 @@ def get_measurements_and_countries(cur):
 # with open('calculated_data_text.txt', 'w') as file:
 x = get_measurements_and_countries(cur)
 y = get_measurements_and_genres(cur)
+rt_data = get_rotten_tomatoes_data_score_over_90(cur)
+z = rt_movies_by_year(rt_data)
 x = x.to_string()
 y = y.to_string()
+z = z.to_string()
+
 
 with open('calculationsText.txt', 'w') as file:
     file.write("Calculated the average metascore by movie country of origin")
@@ -134,5 +127,9 @@ with open('calculationsText.txt', 'w') as file:
     file.write("Calculated the average metascore by movie genre")
     file.write('\n')
     file.write(y)
+    file.write('\n')
+    file.write("Calculated the number of recommended movies with a RT score equal to or higher than 90 by year")
+    file.write('\n')
+    file.write(z)
     file.close()
     
