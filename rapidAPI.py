@@ -15,10 +15,15 @@ path = os.path.dirname(os.path.abspath(__file__))
 conn = sqlite3.connect(path + "/" + db_name)
 cur = conn.cursor()
 
-# plug in move titles to movie api
-# returns a dictionary of movie titles (keys) and associated values (ratings, years, run time, etc)
-# creates a json file to store the returned values
-def create_rapid_api_json():
+# create_rapid_api_json creates checks if a json file containing the movie information exists. 
+# if the json file exists, it opens the file and returns the contents as a dictionary.
+# if the json file does not exist, it opens the PracticeDB database and runs each movie title throug RapidAPI.
+# If the query finds a match, the movies IMDB ID is returned and rerun through the same api. This second query 
+# returns the movies year, rating, runtime, genre, country, awards, box office, IMDB rating, and metascore. This data 
+# the saved to a created json file and the contents are returend by the function.
+# Inputs: api key, database cursor object
+# Outputs: json data as a dictionary (containing movie title as key and movie information as values)
+def create_rapid_api_json(api_key = "21159c5c23msha7c9e5999b522ebp1fc04djsn9fb077c81d02", cur = cur):
     if os.path.exists('output.json'):
         with open('output.json', 'r') as json_file:
             return_dict = json.load(json_file)
@@ -53,7 +58,7 @@ def create_rapid_api_json():
                     url = "https://movie-database-alternative.p.rapidapi.com/"
                     querystring = {"r":"json","i":data['Search'][0]['imdbID']}
                     headers = {
-                        "X-RapidAPI-Key": "21159c5c23msha7c9e5999b522ebp1fc04djsn9fb077c81d02",
+                        "X-RapidAPI-Key": api_key,
                         "X-RapidAPI-Host": "movie-database-alternative.p.rapidapi.com"
                     }
                     response = requests.get(url, headers=headers, params=querystring)
@@ -71,7 +76,7 @@ def create_rapid_api_json():
         json_file.close()    
         return return_dict
 
-rapid_api_data = create_rapid_api_json()
+rapid_api_data = create_rapid_api_json("21159c5c23msha7c9e5999b522ebp1fc04djsn9fb077c81d02", cur)
 
 
 # create tables for genre, movie rating (pg-13, r, etc), and country (USA, UK, etc)
