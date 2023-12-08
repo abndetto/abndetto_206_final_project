@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.api as sm
+import numpy as np
 import statsmodels.formula.api as smf
 
 # connect to database
@@ -15,6 +16,12 @@ cur = conn.cursor()
 
 # get data from Rotten Tomatoes table in database
 # only takes values of movies with a rating of 90 or higher
+
+# Inputs: database cursor object
+# Outputs: returns a list of tuples containing movie title, local id, and year made
+# Explanation: get_rotten_tomatoes_data_score_over_90 takes a database cursor object and returns a list of tuples containing
+# movie title, local id, and year made. The function queries the database for movies with a score of 90 or higher and adds the
+# movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_rotten_tomatoes_data_score_over_90(cur):
     return_list = []
     cur.execute('SELECT title, id, year FROM Rotten_Tomatoes WHERE score >= 90')
@@ -24,7 +31,11 @@ def get_rotten_tomatoes_data_score_over_90(cur):
 
     return return_list
 
-# get all data from rapid api table in database
+# Inputs: database cursor object
+# Outputs: returns a list of tuples containing movie title, local id, and year made
+# Explanation: get_rotten_tomatoes_data takes a database cursor object and returns a list of tuples containing
+# movie title, local id, and year made. The function queries the database for all movies and adds the
+# movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_rapid_api_data(cur):
     return_list = []
     cur.execute('SELECT title, id, year, rated, released, runtime, genre, country, awards, boxoffice,imdbRating,metascore FROM Rapid_API')
@@ -56,6 +67,10 @@ rt_data = get_rotten_tomatoes_data_score_over_90(cur)
 
 # add titles to dataframe and print
 
+# Inputs: list of tuples containing movie title, local id, and year made
+# Outputs: returns a dataframe containing movie title, local id, and year made
+# Explanation: rt_titles_to_df takes a list of tuples containing movie title, local id, and year made and returns a dataframe
+# containing movie title, local id, and year made. The function creates a dataframe from the list of tuples and returns the dataframe.
 def rt_movies_by_year(rt_data):
     rt_titles = [movie[0] for movie in rt_data]
     rt_years = [movie[2] for movie in rt_data]
@@ -67,13 +82,19 @@ def rt_movies_by_year(rt_data):
 # Plotting Rotten Tomato Data (number of movies that recieved 90+ score by year)
 rt_movies_over_90_by_year = rt_movies_by_year(rt_data)
 plt.figure(figsize=(10, 6))
-plt.bar(rt_movies_over_90_by_year['Year'], rt_movies_over_90_by_year['Number of Movies'], color='skyblue')
+plt.bar(rt_movies_over_90_by_year['Year'], rt_movies_over_90_by_year['Number of Movies'], color='green')
 plt.xlabel('Year')
 plt.ylabel('Number of Movies')
 plt.title('Number of Movies by Year With Rotten Tomatoes Score 90 or Higher')
 plt.grid(axis='y')
 plt.show()
 
+
+# Inputs: database cursor object
+# Outputs: returns a list of tuples containing movie title, local id, and year made
+# Explanation: get_rotten_tomatoes_data takes a database cursor object and returns a list of tuples containing
+# movie title, local id, and year made. The function queries the database for all movies and adds the
+# movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_measurements_and_genres(cur):
     return_list = []
     cur.execute('SELECT Rapid_API.title, Rapid_API.metascore, Rapid_API.year, Genres.genre FROM Rapid_API JOIN Genres ON Rapid_API.genre = Genres.id')
@@ -90,6 +111,12 @@ def get_measurements_and_genres(cur):
     avg_metascore_by_genre = gg_df.groupby('Genre').mean()
     return avg_metascore_by_genre
 
+
+# Inputs: database cursor object
+# Outputs: returns a list of tuples containing movie title, local id, and year made
+# Explanation: get_rotten_tomatoes_data takes a database cursor object and returns a list of tuples containing
+# movie title, local id, and year made. The function queries the database for all movies and adds the
+# movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_measurements_and_countries(cur):
     return_list = []
     cur.execute('SELECT Rapid_API.title, Rapid_API.metascore, Rapid_API.year, MovieCountries.country FROM Rapid_API JOIN MovieCountries ON Rapid_API.country = MovieCountries.id')
@@ -106,8 +133,21 @@ def get_measurements_and_countries(cur):
     avg_metascore_by_country = cc_df.groupby('Country').mean()
     return avg_metascore_by_country
 
+# plt.figure(figsize=(10, 6))
+# plt.bar(get_measurements_and_countries(cur).index, get_measurements_and_countries(cur).values, color='green')
+# plt.xlabel('Country of Origin')
+# plt.ylabel('Metascore')
+# plt.title('Average Metascore by Country')
+# plt.grid(axis='y')
+# plt.show()
 
-
+# plt.figure(figsize=(10, 6))
+# plt.bar(get_measurements_and_genres(cur).index, get_measurements_and_genres(cur).values, color='green')
+# plt.xlabel('Movie Genre')
+# plt.ylabel('Number of Movies')
+# plt.title('Average Metascore by Genre')
+# plt.grid(axis='y')
+# plt.show()
 
 # with open('calculated_data_text.txt', 'w') as file:
 x = get_measurements_and_countries(cur)
