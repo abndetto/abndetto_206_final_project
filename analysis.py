@@ -38,28 +38,27 @@ def get_rotten_tomatoes_data_score_over_90(cur):
 # movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_rapid_api_data(cur):
     return_list = []
-    cur.execute('SELECT title, id, year, rated, released, runtime, genre, country, awards, boxoffice,imdbRating,metascore FROM Rapid_API')
+    cur.execute('SELECT id, rated, released, runtime, genre, country, awards, boxoffice,imdbRating,metascore FROM Rapid_API')
     for rval in cur:
-        rx = (rval[0], rval[1], rval[2], rval[3], rval[4], rval[5], rval[6], rval[7], rval[8], rval[9], rval[10], rval[11])
+        rx = (rval[0], rval[1], rval[2], rval[3], rval[4], rval[5], rval[6], rval[7], rval[8], rval[9])
         return_list.append(rx)
         
     return return_list
 
 # craete rapid api dataframe
 rapi_data = get_rapid_api_data(cur)
-rapi_titles = [movie[1] for movie in rapi_data]
-rapi_years = [movie[2] for movie in rapi_data]
-rapi_rated = [movie[3] for movie in rapi_data]
-rapi_released = [movie[4] for movie in rapi_data]
-rapi_runtime = [movie[5] for movie in rapi_data]
-rapi_genre = [movie[6] for movie in rapi_data]
-rapi_country = [movie[7] for movie in rapi_data]
-rapi_awards = [movie[8] for movie in rapi_data]
-rapi_boxoffice = [movie[9] for movie in rapi_data]
-rapi_imdbRating = [movie[10] for movie in rapi_data]
-rapi_metascore = [movie[11] for movie in rapi_data]
+rapi_id = [movie[0] for movie in rapi_data]
+rapi_rated = [movie[1] for movie in rapi_data]
+rapi_released = [movie[2] for movie in rapi_data]
+rapi_runtime = [movie[3] for movie in rapi_data]
+rapi_genre = [movie[4] for movie in rapi_data]
+rapi_country = [movie[5] for movie in rapi_data]
+rapi_awards = [movie[6] for movie in rapi_data]
+rapi_boxoffice = [movie[7] for movie in rapi_data]
+rapi_imdbRating = [movie[8] for movie in rapi_data]
+rapi_metascore = [movie[9] for movie in rapi_data]
 
-rapi_data = {'Title': rapi_titles, 'Year': rapi_years, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore}
+rapi_data = {'ID': rapi_id, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore}
 rapi_df = pd.DataFrame(rapi_data)
 
 # create rotten tomatoes dataframe 
@@ -97,12 +96,12 @@ plt.show()
 # movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_measurements_and_genres(cur):
     return_list = []
-    cur.execute('SELECT Rapid_API.title, Rapid_API.metascore, Rapid_API.year, Genres.genre FROM Rapid_API JOIN Genres ON Rapid_API.genre = Genres.id')
+    cur.execute('SELECT Rapid_API.id, Rapid_API.metascore, Genres.genre FROM Rapid_API JOIN Genres ON Rapid_API.genre = Genres.id')
     for rval in cur:
-        rx = (rval[0], rval[1], rval[2], rval[3])
+        rx = (rval[0], rval[1], rval[2])
         return_list.append(rx)
 
-    genres_genre = [movie[3] for movie in return_list]
+    genres_genre = [movie[2] for movie in return_list]
     genres_metascore = [movie[1] for movie in return_list]
     genre_data = {'Genre': genres_genre, 'Metascore': genres_metascore}
     gg_df = pd.DataFrame(genre_data)
@@ -119,7 +118,7 @@ def get_measurements_and_genres(cur):
 # movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_measurements_and_countries(cur):
     return_list = []
-    cur.execute('SELECT Rapid_API.title, Rapid_API.metascore, Rapid_API.year, MovieCountries.country FROM Rapid_API JOIN MovieCountries ON Rapid_API.country = MovieCountries.id')
+    cur.execute('SELECT Rotten_Tomatoes.title, Rapid_API.metascore, Rotten_Tomatoes.year, MovieCountries.country FROM Rapid_API JOIN MovieCountries ON Rapid_API.country = MovieCountries.id JOIN Rotten_Tomatoes ON Rapid_API.id = Rotten_Tomatoes.id')
     for rval in cur:
         rx = (rval[0], rval[1], rval[2], rval[3])
         return_list.append(rx)

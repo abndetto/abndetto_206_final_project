@@ -1,7 +1,10 @@
 {
     "12 Angry Men": {
         "imdbID": "tt0050083",
-        "Year": 1957,
+        "Year": "1957"
+    },
+    "1": {
+        "imdbID": "tt0050083",
         "Rated": "Approved",
         "Released": "10 Apr 1957",
         "Runtime": "96",
@@ -14,7 +17,10 @@
     },
     "2001: A Space Odyssey": {
         "imdbID": "tt0062622",
-        "Year": 1968,
+        "Year": "1968"
+    },
+    "2": {
+        "imdbID": "tt0062622",
         "Rated": "G",
         "Released": "12 May 1968",
         "Runtime": "149",
@@ -27,7 +33,10 @@
     },
     "A Clockwork Orange": {
         "imdbID": "tt0066921",
-        "Year": 1971,
+        "Year": "1971"
+    },
+    "63": {
+        "imdbID": "tt0066921",
         "Rated": "X",
         "Released": "02 Feb 1972",
         "Runtime": "136",
@@ -40,7 +49,10 @@
     },
     "A Hard Day's Night": {
         "imdbID": "tt0058182",
-        "Year": 1964,
+        "Year": "1964"
+    },
+    "128": {
+        "imdbID": "tt0058182",
         "Rated": "G",
         "Released": "07 Jul 1964",
         "Runtime": "87",
@@ -53,7 +65,10 @@
     },
     "Airplane!": {
         "imdbID": "tt0080339",
-        "Year": 1980,
+        "Year": "1980"
+    },
+    "7": {
+        "imdbID": "tt0080339",
         "Rated": "PG",
         "Released": "02 Jul 1980",
         "Runtime": "88",
@@ -66,7 +81,10 @@
     },
     "Akira": {
         "imdbID": "tt0094625",
-        "Year": 1988,
+        "Year": "1988"
+    },
+    "8": {
+        "imdbID": "tt0094625",
         "Rated": "R",
         "Released": "16 Jul 1988",
         "Runtime": "124",
@@ -79,7 +97,10 @@
     },
     "Alien": {
         "imdbID": "tt0078748",
-        "Year": 1979,
+        "Year": "1979"
+    },
+    "9": {
+        "imdbID": "tt0078748",
         "Rated": "R",
         "Released": "22 Jun 1979",
         "Runtime": "117",
@@ -92,7 +113,10 @@
     },
     "Aliens": {
         "imdbID": "tt0090605",
-        "Year": 1986,
+        "Year": "1986"
+    },
+    "10": {
+        "imdbID": "tt0090605",
         "Rated": "R",
         "Released": "18 Jul 1986",
         "Runtime": "137",
@@ -105,7 +129,10 @@
     },
     "All About Eve": {
         "imdbID": "tt0042192",
-        "Year": 1950,
+        "Year": "1950"
+    },
+    "11": {
+        "imdbID": "tt0042192",
         "Rated": "Passed",
         "Released": "27 Oct 1950",
         "Runtime": "138",
@@ -118,7 +145,10 @@
     },
     "All About My Mother": {
         "imdbID": "tt0185125",
-        "Year": 1999,
+        "Year": "1999"
+    },
+    "12": {
+        "imdbID": "tt0185125",
         "Rated": "R",
         "Released": "31 Mar 2000",
         "Runtime": "101",
@@ -131,7 +161,10 @@
     },
     "All the President's Men": {
         "imdbID": "tt0074119",
-        "Year": 1976,
+        "Year": "1976"
+    },
+    "13": {
+        "imdbID": "tt0074119",
         "Rated": "PG",
         "Released": "09 Apr 1976",
         "Runtime": "138",
@@ -144,7 +177,10 @@
     },
     "Almost Famous": {
         "imdbID": "tt0181875",
-        "Year": 2000,
+        "Year": "2000"
+    },
+    "14": {
+        "imdbID": "tt0181875",
         "Rated": "R",
         "Released": "22 Sep 2000",
         "Runtime": "122",
@@ -157,7 +193,10 @@
     },
     "Amadeus": {
         "imdbID": "tt0086879",
-        "Year": 1984,
+        "Year": "1984"
+    },
+    "15": {
+        "imdbID": "tt0086879",
         "Rated": "PG",
         "Released": "19 Sep 1984",
         "Runtime": "160",
@@ -170,7 +209,10 @@
     },
     "Amour": {
         "imdbID": "tt1602620",
-        "Year": 2012,
+        "Year": "2012"
+    },
+    "17": {
+        "imdbID": "tt1602620",
         "Rated": "PG-13",
         "Released": "20 Sep 2012",
         "Runtime": "127",
@@ -183,7 +225,10 @@
     },
     "Am\u00e9lie": {
         "imdbID": "tt0211915",
-        "Year": 2001,
+        "Year": "2001"
+    },
+    "16": {
+        "imdbID": "tt0211915",
         "Rated": "R",
         "Released": "08 Feb 2002",
         "Runtime": "122",
@@ -196,7 +241,10 @@
     },
     "An American in Paris": {
         "imdbID": "tt0043278",
-        "Year": 1951,
+        "Year": "1951"
+    },
+    "18": {
+        "imdbID": "tt0043278",
         "Rated": "Passed",
         "Released": "11 Nov 1951",
         "Runtime": "114",
@@ -209,7 +257,10 @@
     },
     "Annie Hall": {
         "imdbID": "tt0075686",
-        "Year": 1977,
+        "Year": "1977"
+    },
+    "19": {
+        "imdbID": "tt0075686",
         "Rated": "PG",
         "Released": "20 Apr 1977",
         "Runtime": "93",
@@ -222,7 +273,10 @@
     },
     "Apocalypse Now": {
         "imdbID": "tt0078788",
-        "Year": 1979,
+        "Year": "1979"
+    },
+    "21": {
+        "imdbID": "tt0078788",
         "Rated": "R",
         "Released": "15 Aug 1979",
         "Runtime": "147",
@@ -235,7 +289,10 @@
     },
     "Avengers: Endgame": {
         "imdbID": "tt4154796",
-        "Year": 2019,
+        "Year": "2019"
+    },
+    "22": {
+        "imdbID": "tt4154796",
         "Rated": "PG-13",
         "Released": "26 Apr 2019",
         "Runtime": "181",
@@ -248,7 +305,10 @@
     },
     "Back to the Future": {
         "imdbID": "tt0088763",
-        "Year": 1985,
+        "Year": "1985"
+    },
+    "23": {
+        "imdbID": "tt0088763",
         "Rated": "PG",
         "Released": "03 Jul 1985",
         "Runtime": "116",
@@ -261,7 +321,10 @@
     },
     "Badlands": {
         "imdbID": "tt0069762",
-        "Year": 1973,
+        "Year": "1973"
+    },
+    "24": {
+        "imdbID": "tt0069762",
         "Rated": "PG",
         "Released": "05 Jan 1974",
         "Runtime": "94",
@@ -274,7 +337,10 @@
     },
     "Beauty and the Beast": {
         "imdbID": "tt0101414",
-        "Year": 1991,
+        "Year": "1991"
+    },
+    "25": {
+        "imdbID": "tt0101414",
         "Rated": "G",
         "Released": "22 Nov 1991",
         "Runtime": "84",
@@ -287,7 +353,10 @@
     },
     "Being John Malkovich": {
         "imdbID": "tt0120601",
-        "Year": 1999,
+        "Year": "1999"
+    },
+    "26": {
+        "imdbID": "tt0120601",
         "Rated": "R",
         "Released": "03 Dec 1999",
         "Runtime": "113",
@@ -300,7 +369,10 @@
     },
     "Being There": {
         "imdbID": "tt0078841",
-        "Year": 1979,
+        "Year": "1979"
+    },
+    "27": {
+        "imdbID": "tt0078841",
         "Rated": "PG",
         "Released": "08 Feb 1980",
         "Runtime": "130",
@@ -313,7 +385,10 @@
     },
     "Better Luck Tomorrow": {
         "imdbID": "tt0280477",
-        "Year": 2002,
+        "Year": "2002"
+    },
+    "29": {
+        "imdbID": "tt0280477",
         "Rated": "R",
         "Released": "25 Apr 2003",
         "Runtime": "101",
@@ -326,7 +401,10 @@
     },
     "Bicycle Thieves": {
         "imdbID": "tt0040522",
-        "Year": 1948,
+        "Year": "1948"
+    },
+    "30": {
+        "imdbID": "tt0040522",
         "Rated": "Not Rated",
         "Released": "13 Dec 1949",
         "Runtime": "89",
@@ -339,7 +417,10 @@
     },
     "Birdman or (The Unexpected Virtue of Ignorance)": {
         "imdbID": "tt2562232",
-        "Year": 2014,
+        "Year": "2014"
+    },
+    "33": {
+        "imdbID": "tt2562232",
         "Rated": "R",
         "Released": "14 Nov 2014",
         "Runtime": "119",
@@ -352,7 +433,10 @@
     },
     "Black Hawk Down": {
         "imdbID": "tt0265086",
-        "Year": 2001,
+        "Year": "2001"
+    },
+    "34": {
+        "imdbID": "tt0265086",
         "Rated": "R",
         "Released": "18 Jan 2002",
         "Runtime": "144",
@@ -365,7 +449,10 @@
     },
     "Black Orpheus": {
         "imdbID": "tt0053146",
-        "Year": 1959,
+        "Year": "1959"
+    },
+    "35": {
+        "imdbID": "tt0053146",
         "Rated": "PG",
         "Released": "21 Dec 1959",
         "Runtime": "100",
@@ -378,7 +465,10 @@
     },
     "Black Panther": {
         "imdbID": "tt1825683",
-        "Year": 2018,
+        "Year": "2018"
+    },
+    "36": {
+        "imdbID": "tt1825683",
         "Rated": "PG-13",
         "Released": "16 Feb 2018",
         "Runtime": "134",
@@ -391,7 +481,10 @@
     },
     "Blade Runner": {
         "imdbID": "tt0083658",
-        "Year": 1982,
+        "Year": "1982"
+    },
+    "37": {
+        "imdbID": "tt0083658",
         "Rated": "R",
         "Released": "25 Jun 1982",
         "Runtime": "117",
@@ -404,7 +497,10 @@
     },
     "Blazing Saddles": {
         "imdbID": "tt0071230",
-        "Year": 1974,
+        "Year": "1974"
+    },
+    "38": {
+        "imdbID": "tt0071230",
         "Rated": "R",
         "Released": "07 Feb 1974",
         "Runtime": "93",
@@ -417,7 +513,10 @@
     },
     "Boogie Nights": {
         "imdbID": "tt0118749",
-        "Year": 1997,
+        "Year": "1997"
+    },
+    "39": {
+        "imdbID": "tt0118749",
         "Rated": "R",
         "Released": "31 Oct 1997",
         "Runtime": "155",
@@ -430,7 +529,10 @@
     },
     "Boys Don't Cry": {
         "imdbID": "tt0171804",
-        "Year": 1999,
+        "Year": "1999"
+    },
+    "40": {
+        "imdbID": "tt0171804",
         "Rated": "R",
         "Released": "31 Mar 2000",
         "Runtime": "118",
@@ -445,22 +547,12 @@
         "imdbID": "tt0101507",
         "Year": "1991"
     },
-    "Boyz n the Hood": {
-        "imdbID": "tt0101507",
-        "Year": 1991,
-        "Rated": "R",
-        "Released": "12 Jul 1991",
-        "Runtime": "112",
-        "Genre": "Crime, Drama",
-        "Country": "United States",
-        "Awards": "Nominated for 2 Oscars. 12 wins & 27 nominations total",
-        "BoxOffice": "$57,504,069",
-        "imdbRating": "7.8",
-        "Metascore": "76"
-    },
     "Breathless": {
         "imdbID": "tt0053472",
-        "Year": 1960,
+        "Year": "1960"
+    },
+    "43": {
+        "imdbID": "tt0053472",
         "Rated": "Not Rated",
         "Released": "07 Feb 1961",
         "Runtime": "90",
@@ -473,7 +565,10 @@
     },
     "Bridesmaids": {
         "imdbID": "tt1478338",
-        "Year": 2011,
+        "Year": "2011"
+    },
+    "44": {
+        "imdbID": "tt1478338",
         "Rated": "R",
         "Released": "13 May 2011",
         "Runtime": "125",
@@ -486,7 +581,10 @@
     },
     "Bridget Jones's Diary": {
         "imdbID": "tt0243155",
-        "Year": 2001,
+        "Year": "2001"
+    },
+    "46": {
+        "imdbID": "tt0243155",
         "Rated": "R",
         "Released": "13 Apr 2001",
         "Runtime": "97",
@@ -499,7 +597,10 @@
     },
     "Broadcast News": {
         "imdbID": "tt0092699",
-        "Year": 1987,
+        "Year": "1987"
+    },
+    "47": {
+        "imdbID": "tt0092699",
         "Rated": "R",
         "Released": "25 Dec 1987",
         "Runtime": "133",
@@ -512,7 +613,10 @@
     },
     "Brokeback Mountain": {
         "imdbID": "tt0388795",
-        "Year": 2005,
+        "Year": "2005"
+    },
+    "48": {
+        "imdbID": "tt0388795",
         "Rated": "R",
         "Released": "13 Jan 2006",
         "Runtime": "134",
@@ -525,7 +629,10 @@
     },
     "Butch Cassidy and the Sundance Kid": {
         "imdbID": "tt0064115",
-        "Year": 1969,
+        "Year": "1969"
+    },
+    "49": {
+        "imdbID": "tt0064115",
         "Rated": "PG",
         "Released": "24 Sep 1969",
         "Runtime": "110",
@@ -538,7 +645,10 @@
     },
     "Cabaret": {
         "imdbID": "tt0068327",
-        "Year": 1972,
+        "Year": "1972"
+    },
+    "50": {
+        "imdbID": "tt0068327",
         "Rated": "PG",
         "Released": "13 Feb 1972",
         "Runtime": "124",
@@ -551,7 +661,10 @@
     },
     "Call Me by Your Name": {
         "imdbID": "tt5726616",
-        "Year": 2017,
+        "Year": "2017"
+    },
+    "52": {
+        "imdbID": "tt5726616",
         "Rated": "R",
         "Released": "19 Jan 2018",
         "Runtime": "132",
@@ -564,7 +677,10 @@
     },
     "Carol": {
         "imdbID": "tt2402927",
-        "Year": 2015,
+        "Year": "2015"
+    },
+    "53": {
+        "imdbID": "tt2402927",
         "Rated": "R",
         "Released": "15 Jan 2016",
         "Runtime": "118",
@@ -577,7 +693,10 @@
     },
     "Casablanca": {
         "imdbID": "tt0034583",
-        "Year": 1942,
+        "Year": "1942"
+    },
+    "54": {
+        "imdbID": "tt0034583",
         "Rated": "PG",
         "Released": "23 Jan 1943",
         "Runtime": "102",
@@ -590,7 +709,10 @@
     },
     "Casino Royale": {
         "imdbID": "tt0381061",
-        "Year": 2006,
+        "Year": "2006"
+    },
+    "55": {
+        "imdbID": "tt0381061",
         "Rated": "PG-13",
         "Released": "17 Nov 2006",
         "Runtime": "144",
@@ -603,7 +725,10 @@
     },
     "Children of Men": {
         "imdbID": "tt0206634",
-        "Year": 2006,
+        "Year": "2006"
+    },
+    "56": {
+        "imdbID": "tt0206634",
         "Rated": "R",
         "Released": "05 Jan 2007",
         "Runtime": "109",
@@ -616,7 +741,10 @@
     },
     "Chinatown": {
         "imdbID": "tt0071315",
-        "Year": 1974,
+        "Year": "1974"
+    },
+    "57": {
+        "imdbID": "tt0071315",
         "Rated": "R",
         "Released": "20 Jun 1974",
         "Runtime": "130",
@@ -629,7 +757,10 @@
     },
     "Cinema Paradiso": {
         "imdbID": "tt0095765",
-        "Year": 1988,
+        "Year": "1988"
+    },
+    "59": {
+        "imdbID": "tt0095765",
         "Rated": "PG",
         "Released": "23 Feb 1990",
         "Runtime": "155",
@@ -642,7 +773,10 @@
     },
     "Citizen Kane": {
         "imdbID": "tt0033467",
-        "Year": 1941,
+        "Year": "1941"
+    },
+    "60": {
+        "imdbID": "tt0033467",
         "Rated": "PG",
         "Released": "05 Sep 1941",
         "Runtime": "119",
@@ -655,7 +789,10 @@
     },
     "City Lights": {
         "imdbID": "tt0021749",
-        "Year": 1931,
+        "Year": "1931"
+    },
+    "61": {
+        "imdbID": "tt0021749",
         "Rated": "G",
         "Released": "07 Mar 1931",
         "Runtime": "87",
@@ -668,7 +805,10 @@
     },
     "City of God": {
         "imdbID": "tt0317248",
-        "Year": 2002,
+        "Year": "2002"
+    },
+    "58": {
+        "imdbID": "tt0317248",
         "Rated": "R",
         "Released": "13 Feb 2004",
         "Runtime": "130",
@@ -681,7 +821,10 @@
     },
     "Clerks": {
         "imdbID": "tt0109445",
-        "Year": 1994,
+        "Year": "1994"
+    },
+    "62": {
+        "imdbID": "tt0109445",
         "Rated": "R",
         "Released": "09 Nov 1994",
         "Runtime": "92",
@@ -694,7 +837,10 @@
     },
     "Clueless": {
         "imdbID": "tt0112697",
-        "Year": 1995,
+        "Year": "1995"
+    },
+    "64": {
+        "imdbID": "tt0112697",
         "Rated": "PG-13",
         "Released": "19 Jul 1995",
         "Runtime": "97",
@@ -707,20 +853,26 @@
     },
     "Coco": {
         "imdbID": "tt2380307",
-        "Year": 2017,
+        "Year": "2017"
+    },
+    "65": {
+        "imdbID": "tt2380307",
         "Rated": "PG",
         "Released": "22 Nov 2017",
         "Runtime": "105",
         "Genre": "Animation, Adventure, Drama",
-        "Country": "United States, Japan",
-        "Awards": "Won 2 Oscars. 110 wins & 40 nominations total",
+        "Country": "United States, Mexico",
+        "Awards": "Won 2 Oscars. 110 wins & 41 nominations total",
         "BoxOffice": "$210,460,015",
         "imdbRating": "8.4",
         "Metascore": "81"
     },
     "Crazy Rich Asians": {
         "imdbID": "tt3104988",
-        "Year": 2018,
+        "Year": "2018"
+    },
+    "66": {
+        "imdbID": "tt3104988",
         "Rated": "PG-13",
         "Released": "15 Aug 2018",
         "Runtime": "120",
@@ -733,7 +885,10 @@
     },
     "Creed": {
         "imdbID": "tt3076658",
-        "Year": 2015,
+        "Year": "2015"
+    },
+    "67": {
+        "imdbID": "tt3076658",
         "Rated": "PG-13",
         "Released": "25 Nov 2015",
         "Runtime": "133",
@@ -746,7 +901,10 @@
     },
     "Crouching Tiger, Hidden Dragon": {
         "imdbID": "tt0190332",
-        "Year": 2000,
+        "Year": "2000"
+    },
+    "68": {
+        "imdbID": "tt0190332",
         "Rated": "PG-13",
         "Released": "12 Jan 2001",
         "Runtime": "120",
@@ -759,7 +917,10 @@
     },
     "Dawn of the Dead": {
         "imdbID": "tt0363547",
-        "Year": 2004,
+        "Year": "2004"
+    },
+    "70": {
+        "imdbID": "tt0363547",
         "Rated": "R",
         "Released": "19 Mar 2004",
         "Runtime": "101",
@@ -772,7 +933,10 @@
     },
     "Dazed and Confused": {
         "imdbID": "tt0106677",
-        "Year": 1993,
+        "Year": "1993"
+    },
+    "72": {
+        "imdbID": "tt0106677",
         "Rated": "R",
         "Released": "24 Sep 1993",
         "Runtime": "103",
@@ -785,7 +949,10 @@
     },
     "Dead Poets Society": {
         "imdbID": "tt0097165",
-        "Year": 1989,
+        "Year": "1989"
+    },
+    "73": {
+        "imdbID": "tt0097165",
         "Rated": "PG",
         "Released": "09 Jun 1989",
         "Runtime": "128",
@@ -798,7 +965,10 @@
     },
     "Die Hard": {
         "imdbID": "tt0095016",
-        "Year": 1988,
+        "Year": "1988"
+    },
+    "74": {
+        "imdbID": "tt0095016",
         "Rated": "R",
         "Released": "20 Jul 1988",
         "Runtime": "132",
@@ -811,7 +981,10 @@
     },
     "Do the Right Thing": {
         "imdbID": "tt0097216",
-        "Year": 1989,
+        "Year": "1989"
+    },
+    "75": {
+        "imdbID": "tt0097216",
         "Rated": "R",
         "Released": "21 Jul 1989",
         "Runtime": "120",
@@ -824,7 +997,10 @@
     },
     "Doctor Zhivago": {
         "imdbID": "tt0059113",
-        "Year": 1965,
+        "Year": "1965"
+    },
+    "76": {
+        "imdbID": "tt0059113",
         "Rated": "PG-13",
         "Released": "31 Dec 1965",
         "Runtime": "197",
@@ -837,7 +1013,10 @@
     },
     "Dog Day Afternoon": {
         "imdbID": "tt0072890",
-        "Year": 1975,
+        "Year": "1975"
+    },
+    "77": {
+        "imdbID": "tt0072890",
         "Rated": "R",
         "Released": "25 Dec 1975",
         "Runtime": "125",
@@ -850,7 +1029,10 @@
     },
     "Don't Look Now": {
         "imdbID": "tt0069995",
-        "Year": 1973,
+        "Year": "1973"
+    },
+    "78": {
+        "imdbID": "tt0069995",
         "Rated": "R",
         "Released": "01 Jan 1974",
         "Runtime": "110",
@@ -863,7 +1045,10 @@
     },
     "Double Indemnity": {
         "imdbID": "tt0036775",
-        "Year": 1944,
+        "Year": "1944"
+    },
+    "79": {
+        "imdbID": "tt0036775",
         "Rated": "Passed",
         "Released": "06 Jul 1944",
         "Runtime": "107",
@@ -878,22 +1063,12 @@
         "imdbID": "tt0057012",
         "Year": "1964"
     },
-    "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb": {
-        "imdbID": "tt0057012",
-        "Year": 1964,
-        "Rated": "PG",
-        "Released": "29 Jan 1964",
-        "Runtime": "95",
-        "Genre": "Comedy, War",
-        "Country": "United Kingdom, United States",
-        "Awards": "Nominated for 4 Oscars. 14 wins & 11 nominations total",
-        "BoxOffice": "$9,440,272",
-        "imdbRating": "8.4",
-        "Metascore": "97"
-    },
     "Drive": {
         "imdbID": "tt0780504",
-        "Year": 2011,
+        "Year": "2011"
+    },
+    "82": {
+        "imdbID": "tt0780504",
         "Rated": "R",
         "Released": "16 Sep 2011",
         "Runtime": "100",
@@ -906,7 +1081,10 @@
     },
     "Duck Soup": {
         "imdbID": "tt0023969",
-        "Year": 1933,
+        "Year": "1933"
+    },
+    "84": {
+        "imdbID": "tt0023969",
         "Rated": "Not Rated",
         "Released": "17 Nov 1933",
         "Runtime": "69",
@@ -919,7 +1097,10 @@
     },
     "E.T. the Extra-Terrestrial": {
         "imdbID": "tt0083866",
-        "Year": 1982,
+        "Year": "1982"
+    },
+    "85": {
+        "imdbID": "tt0083866",
         "Rated": "PG",
         "Released": "11 Jun 1982",
         "Runtime": "115",
@@ -932,7 +1113,10 @@
     },
     "Easy Rider": {
         "imdbID": "tt0064276",
-        "Year": 1969,
+        "Year": "1969"
+    },
+    "86": {
+        "imdbID": "tt0064276",
         "Rated": "R",
         "Released": "26 Jun 1969",
         "Runtime": "95",
@@ -945,7 +1129,10 @@
     },
     "Edward Scissorhands": {
         "imdbID": "tt0099487",
-        "Year": 1990,
+        "Year": "1990"
+    },
+    "87": {
+        "imdbID": "tt0099487",
         "Rated": "PG-13",
         "Released": "14 Dec 1990",
         "Runtime": "105",
@@ -958,7 +1145,10 @@
     },
     "Enter the Dragon": {
         "imdbID": "tt0070034",
-        "Year": 1973,
+        "Year": "1973"
+    },
+    "90": {
+        "imdbID": "tt0070034",
         "Rated": "R",
         "Released": "19 Aug 1973",
         "Runtime": "102",
@@ -971,7 +1161,10 @@
     },
     "Eternal Sunshine of the Spotless Mind": {
         "imdbID": "tt0338013",
-        "Year": 2004,
+        "Year": "2004"
+    },
+    "91": {
+        "imdbID": "tt0338013",
         "Rated": "R",
         "Released": "19 Mar 2004",
         "Runtime": "108",
@@ -984,7 +1177,10 @@
     },
     "Fargo": {
         "imdbID": "tt0116282",
-        "Year": 1996,
+        "Year": "1996"
+    },
+    "95": {
+        "imdbID": "tt0116282",
         "Rated": "R",
         "Released": "05 Apr 1996",
         "Runtime": "98",
@@ -997,7 +1193,10 @@
     },
     "Fast Five": {
         "imdbID": "tt1596343",
-        "Year": 2011,
+        "Year": "2011"
+    },
+    "96": {
+        "imdbID": "tt1596343",
         "Rated": "PG-13",
         "Released": "29 Apr 2011",
         "Runtime": "130",
@@ -1010,7 +1209,10 @@
     },
     "Fast Times at Ridgemont High": {
         "imdbID": "tt0083929",
-        "Year": 1982,
+        "Year": "1982"
+    },
+    "97": {
+        "imdbID": "tt0083929",
         "Rated": "R",
         "Released": "13 Aug 1982",
         "Runtime": "90",
@@ -1023,7 +1225,10 @@
     },
     "Fight Club": {
         "imdbID": "tt0137523",
-        "Year": 1999,
+        "Year": "1999"
+    },
+    "98": {
+        "imdbID": "tt0137523",
         "Rated": "R",
         "Released": "15 Oct 1999",
         "Runtime": "139",
@@ -1036,7 +1241,10 @@
     },
     "Fish Tank": {
         "imdbID": "tt1232776",
-        "Year": 2009,
+        "Year": "2009"
+    },
+    "99": {
+        "imdbID": "tt1232776",
         "Rated": "Not Rated",
         "Released": "11 Sep 2009",
         "Runtime": "123",
@@ -1049,7 +1257,10 @@
     },
     "Forbidden Planet": {
         "imdbID": "tt0049223",
-        "Year": 1956,
+        "Year": "1956"
+    },
+    "100": {
+        "imdbID": "tt0049223",
         "Rated": "G",
         "Released": "13 Jun 1958",
         "Runtime": "98",
@@ -1062,7 +1273,10 @@
     },
     "Four Weddings and a Funeral": {
         "imdbID": "tt0109831",
-        "Year": 1994,
+        "Year": "1994"
+    },
+    "101": {
+        "imdbID": "tt0109831",
         "Rated": "R",
         "Released": "15 Apr 1994",
         "Runtime": "117",
@@ -1075,7 +1289,10 @@
     },
     "Frida": {
         "imdbID": "tt0120679",
-        "Year": 2002,
+        "Year": "2002"
+    },
+    "104": {
+        "imdbID": "tt0120679",
         "Rated": "R",
         "Released": "22 Nov 2002",
         "Runtime": "123",
@@ -1088,7 +1305,10 @@
     },
     "Gallipoli": {
         "imdbID": "tt0082432",
-        "Year": 1981,
+        "Year": "1981"
+    },
+    "105": {
+        "imdbID": "tt0082432",
         "Rated": "PG",
         "Released": "28 Aug 1981",
         "Runtime": "110",
@@ -1101,7 +1321,10 @@
     },
     "Gandhi": {
         "imdbID": "tt0083987",
-        "Year": 1982,
+        "Year": "1982"
+    },
+    "106": {
+        "imdbID": "tt0083987",
         "Rated": "PG",
         "Released": "25 Feb 1983",
         "Runtime": "191",
@@ -1114,7 +1337,10 @@
     },
     "Gattaca": {
         "imdbID": "tt0119177",
-        "Year": 1997,
+        "Year": "1997"
+    },
+    "107": {
+        "imdbID": "tt0119177",
         "Rated": "PG-13",
         "Released": "24 Oct 1997",
         "Runtime": "106",
@@ -1127,7 +1353,10 @@
     },
     "Get Out": {
         "imdbID": "tt5052448",
-        "Year": 2017,
+        "Year": "2017"
+    },
+    "109": {
+        "imdbID": "tt5052448",
         "Rated": "R",
         "Released": "24 Feb 2017",
         "Runtime": "104",
@@ -1140,7 +1369,10 @@
     },
     "Ghost in the Shell": {
         "imdbID": "tt1219827",
-        "Year": 2017,
+        "Year": "2017"
+    },
+    "110": {
+        "imdbID": "tt1219827",
         "Rated": "PG-13",
         "Released": "31 Mar 2017",
         "Runtime": "107",
@@ -1153,7 +1385,10 @@
     },
     "Ghostbusters": {
         "imdbID": "tt0087332",
-        "Year": 1984,
+        "Year": "1984"
+    },
+    "111": {
+        "imdbID": "tt0087332",
         "Rated": "PG",
         "Released": "08 Jun 1984",
         "Runtime": "105",
@@ -1166,7 +1401,10 @@
     },
     "Girls Trip": {
         "imdbID": "tt3564472",
-        "Year": 2017,
+        "Year": "2017"
+    },
+    "112": {
+        "imdbID": "tt3564472",
         "Rated": "R",
         "Released": "21 Jul 2017",
         "Runtime": "122",
@@ -1179,7 +1417,10 @@
     },
     "Godzilla": {
         "imdbID": "tt0831387",
-        "Year": 2014,
+        "Year": "2014"
+    },
+    "115": {
+        "imdbID": "tt0831387",
         "Rated": "PG-13",
         "Released": "16 May 2014",
         "Runtime": "123",
@@ -1192,7 +1433,10 @@
     },
     "Goodfellas": {
         "imdbID": "tt0099685",
-        "Year": 1990,
+        "Year": "1990"
+    },
+    "118": {
+        "imdbID": "tt0099685",
         "Rated": "R",
         "Released": "21 Sep 1990",
         "Runtime": "145",
@@ -1205,7 +1449,10 @@
     },
     "Grease": {
         "imdbID": "tt0077631",
-        "Year": 1978,
+        "Year": "1978"
+    },
+    "122": {
+        "imdbID": "tt0077631",
         "Rated": "PG",
         "Released": "16 Jun 1978",
         "Runtime": "110",
@@ -1218,7 +1465,10 @@
     },
     "Groundhog Day": {
         "imdbID": "tt0107048",
-        "Year": 1993,
+        "Year": "1993"
+    },
+    "124": {
+        "imdbID": "tt0107048",
         "Rated": "PG",
         "Released": "12 Feb 1993",
         "Runtime": "101",
@@ -1231,7 +1481,10 @@
     },
     "Guardians of the Galaxy": {
         "imdbID": "tt2015381",
-        "Year": 2014,
+        "Year": "2014"
+    },
+    "125": {
+        "imdbID": "tt2015381",
         "Rated": "PG-13",
         "Released": "01 Aug 2014",
         "Runtime": "121",
@@ -1244,7 +1497,10 @@
     },
     "Hairspray": {
         "imdbID": "tt0427327",
-        "Year": 2007,
+        "Year": "2007"
+    },
+    "126": {
+        "imdbID": "tt0427327",
         "Rated": "PG",
         "Released": "20 Jul 2007",
         "Runtime": "117",
@@ -1257,7 +1513,10 @@
     },
     "Halloween": {
         "imdbID": "tt0077651",
-        "Year": 1978,
+        "Year": "1978"
+    },
+    "127": {
+        "imdbID": "tt0077651",
         "Rated": "R",
         "Released": "27 Oct 1978",
         "Runtime": "91",
@@ -1270,7 +1529,10 @@
     },
     "Harold and Maude": {
         "imdbID": "tt0067185",
-        "Year": 1971,
+        "Year": "1971"
+    },
+    "129": {
+        "imdbID": "tt0067185",
         "Rated": "PG",
         "Released": "20 Dec 1971",
         "Runtime": "91",
@@ -1283,7 +1545,10 @@
     },
     "Harry Potter and the Prisoner of Azkaban": {
         "imdbID": "tt0304141",
-        "Year": 2004,
+        "Year": "2004"
+    },
+    "130": {
+        "imdbID": "tt0304141",
         "Rated": "PG",
         "Released": "04 Jun 2004",
         "Runtime": "142",
@@ -1296,7 +1561,10 @@
     },
     "Heat": {
         "imdbID": "tt0113277",
-        "Year": 1995,
+        "Year": "1995"
+    },
+    "132": {
+        "imdbID": "tt0113277",
         "Rated": "R",
         "Released": "15 Dec 1995",
         "Runtime": "170",
@@ -1309,7 +1577,10 @@
     },
     "Heathers": {
         "imdbID": "tt0097493",
-        "Year": 1988,
+        "Year": "1988"
+    },
+    "133": {
+        "imdbID": "tt0097493",
         "Rated": "R",
         "Released": "31 Mar 1989",
         "Runtime": "103",
@@ -1322,12 +1593,15 @@
     },
     "Hedwig and the Angry Inch": {
         "imdbID": "tt0248845",
-        "Year": 2001,
+        "Year": "2001"
+    },
+    "134": {
+        "imdbID": "tt0248845",
         "Rated": "R",
         "Released": "31 Aug 2001",
         "Runtime": "95",
         "Genre": "Comedy, Drama, Music",
-        "Country": "United States, Canada",
+        "Country": "Canada, United States",
         "Awards": "28 wins & 33 nominations",
         "BoxOffice": "$3,082,286",
         "imdbRating": "7.7",
@@ -1335,7 +1609,10 @@
     },
     "High Noon": {
         "imdbID": "tt0044706",
-        "Year": 1952,
+        "Year": "1952"
+    },
+    "136": {
+        "imdbID": "tt0044706",
         "Rated": "PG",
         "Released": "30 Jul 1952",
         "Runtime": "85",
@@ -1348,7 +1625,10 @@
     },
     "His Girl Friday": {
         "imdbID": "tt0032599",
-        "Year": 1940,
+        "Year": "1940"
+    },
+    "137": {
+        "imdbID": "tt0032599",
         "Rated": "Passed",
         "Released": "18 Jan 1940",
         "Runtime": "92",
@@ -1361,7 +1641,10 @@
     },
     "Ikiru": {
         "imdbID": "tt0044741",
-        "Year": 1952,
+        "Year": "1952"
+    },
+    "139": {
+        "imdbID": "tt0044741",
         "Rated": "Not Rated",
         "Released": "25 Mar 1956",
         "Runtime": "143",
@@ -1374,7 +1657,10 @@
     },
     "In the Heat of the Night": {
         "imdbID": "tt0061811",
-        "Year": 1967,
+        "Year": "1967"
+    },
+    "140": {
+        "imdbID": "tt0061811",
         "Rated": "Approved",
         "Released": "02 Aug 1967",
         "Runtime": "110",
@@ -1387,7 +1673,10 @@
     },
     "In the Mood for Love": {
         "imdbID": "tt0118694",
-        "Year": 2000,
+        "Year": "2000"
+    },
+    "141": {
+        "imdbID": "tt0118694",
         "Rated": "PG",
         "Released": "09 Mar 2001",
         "Runtime": "98",
@@ -1400,7 +1689,10 @@
     },
     "Inception": {
         "imdbID": "tt1375666",
-        "Year": 2010,
+        "Year": "2010"
+    },
+    "142": {
+        "imdbID": "tt1375666",
         "Rated": "PG-13",
         "Released": "16 Jul 2010",
         "Runtime": "148",
@@ -1413,7 +1705,10 @@
     },
     "Inglourious Basterds": {
         "imdbID": "tt0361748",
-        "Year": 2009,
+        "Year": "2009"
+    },
+    "143": {
+        "imdbID": "tt0361748",
         "Rated": "R",
         "Released": "21 Aug 2009",
         "Runtime": "153",
@@ -1426,7 +1721,10 @@
     },
     "Inside Out": {
         "imdbID": "tt2096673",
-        "Year": 2015,
+        "Year": "2015"
+    },
+    "144": {
+        "imdbID": "tt2096673",
         "Rated": "PG",
         "Released": "19 Jun 2015",
         "Runtime": "95",
@@ -1439,20 +1737,26 @@
     },
     "Iron Man": {
         "imdbID": "tt0371746",
-        "Year": 2008,
+        "Year": "2008"
+    },
+    "146": {
+        "imdbID": "tt0371746",
         "Rated": "PG-13",
         "Released": "02 May 2008",
         "Runtime": "126",
         "Genre": "Action, Adventure, Sci-Fi",
         "Country": "United States, Canada",
-        "Awards": "Nominated for 2 Oscars. 22 wins & 73 nominations total",
+        "Awards": "Nominated for 2 Oscars. 23 wins & 73 nominations total",
         "BoxOffice": "$319,034,126",
         "imdbRating": "7.9",
         "Metascore": "79"
     },
     "It Happened One Night": {
         "imdbID": "tt0025316",
-        "Year": 1934,
+        "Year": "1934"
+    },
+    "147": {
+        "imdbID": "tt0025316",
         "Rated": "Passed",
         "Released": "22 Feb 1934",
         "Runtime": "105",
@@ -1465,7 +1769,10 @@
     },
     "It's a Wonderful Life": {
         "imdbID": "tt0038650",
-        "Year": 1946,
+        "Year": "1946"
+    },
+    "148": {
+        "imdbID": "tt0038650",
         "Rated": "PG",
         "Released": "07 Jan 1947",
         "Runtime": "130",
@@ -1478,7 +1785,10 @@
     },
     "Jaws": {
         "imdbID": "tt0073195",
-        "Year": 1975,
+        "Year": "1975"
+    },
+    "149": {
+        "imdbID": "tt0073195",
         "Rated": "PG",
         "Released": "20 Jun 1975",
         "Runtime": "124",
@@ -1491,7 +1801,10 @@
     },
     "John Wick": {
         "imdbID": "tt2911666",
-        "Year": 2014,
+        "Year": "2014"
+    },
+    "150": {
+        "imdbID": "tt2911666",
         "Rated": "R",
         "Released": "24 Oct 2014",
         "Runtime": "101",
@@ -1504,7 +1817,10 @@
     },
     "The 400 Blows": {
         "imdbID": "tt0053198",
-        "Year": 1959,
+        "Year": "1959"
+    },
+    "3": {
+        "imdbID": "tt0053198",
         "Rated": "Not Rated",
         "Released": "16 Nov 1959",
         "Runtime": "99",
@@ -1517,7 +1833,10 @@
     },
     "The Adventures of Priscilla, Queen of the Desert": {
         "imdbID": "tt0109045",
-        "Year": 1994,
+        "Year": "1994"
+    },
+    "4": {
+        "imdbID": "tt0109045",
         "Rated": "R",
         "Released": "10 Aug 1994",
         "Runtime": "104",
@@ -1530,7 +1849,10 @@
     },
     "The Adventures of Robin Hood": {
         "imdbID": "tt0029843",
-        "Year": 1938,
+        "Year": "1938"
+    },
+    "5": {
+        "imdbID": "tt0029843",
         "Rated": "PG",
         "Released": "14 May 1938",
         "Runtime": "102",
@@ -1543,7 +1865,10 @@
     },
     "The Apartment": {
         "imdbID": "tt0053604",
-        "Year": 1960,
+        "Year": "1960"
+    },
+    "20": {
+        "imdbID": "tt0053604",
         "Rated": "Approved",
         "Released": "29 Jun 1960",
         "Runtime": "125",
@@ -1556,7 +1881,10 @@
     },
     "The Best Years of Our Lives": {
         "imdbID": "tt0036868",
-        "Year": 1946,
+        "Year": "1946"
+    },
+    "28": {
+        "imdbID": "tt0036868",
         "Rated": "Approved",
         "Released": "29 May 1947",
         "Runtime": "170",
@@ -1569,7 +1897,10 @@
     },
     "The Big Lebowski": {
         "imdbID": "tt0118715",
-        "Year": 1998,
+        "Year": "1998"
+    },
+    "31": {
+        "imdbID": "tt0118715",
         "Rated": "R",
         "Released": "06 Mar 1998",
         "Runtime": "117",
@@ -1582,7 +1913,10 @@
     },
     "The Big Sick": {
         "imdbID": "tt5462602",
-        "Year": 2017,
+        "Year": "2017"
+    },
+    "32": {
+        "imdbID": "tt5462602",
         "Rated": "R",
         "Released": "14 Jul 2017",
         "Runtime": "120",
@@ -1595,7 +1929,10 @@
     },
     "The Breakfast Club": {
         "imdbID": "tt0088847",
-        "Year": 1985,
+        "Year": "1985"
+    },
+    "42": {
+        "imdbID": "tt0088847",
         "Rated": "R",
         "Released": "15 Feb 1985",
         "Runtime": "97",
@@ -1608,7 +1945,10 @@
     },
     "The Bridge on the River Kwai": {
         "imdbID": "tt0050212",
-        "Year": 1957,
+        "Year": "1957"
+    },
+    "45": {
+        "imdbID": "tt0050212",
         "Rated": "PG",
         "Released": "14 Dec 1957",
         "Runtime": "161",
@@ -1621,7 +1961,10 @@
     },
     "The Cabinet of Dr. Caligari": {
         "imdbID": "tt0010323",
-        "Year": 1920,
+        "Year": "1920"
+    },
+    "51": {
+        "imdbID": "tt0010323",
         "Rated": "Not Rated",
         "Released": "27 Feb 1920",
         "Runtime": "67",
@@ -1634,7 +1977,10 @@
     },
     "The Dark Knight": {
         "imdbID": "tt0468569",
-        "Year": 2008,
+        "Year": "2008"
+    },
+    "69": {
+        "imdbID": "tt0468569",
         "Rated": "PG-13",
         "Released": "18 Jul 2008",
         "Runtime": "152",
@@ -1647,7 +1993,10 @@
     },
     "The Day the Earth Stood Still": {
         "imdbID": "tt0970416",
-        "Year": 2008,
+        "Year": "2008"
+    },
+    "71": {
+        "imdbID": "tt0970416",
         "Rated": "PG-13",
         "Released": "12 Dec 2008",
         "Runtime": "104",
@@ -1660,7 +2009,10 @@
     },
     "The Elephant Man": {
         "imdbID": "tt0080678",
-        "Year": 1980,
+        "Year": "1980"
+    },
+    "89": {
+        "imdbID": "tt0080678",
         "Rated": "PG",
         "Released": "10 Oct 1980",
         "Runtime": "124",
@@ -1673,7 +2025,10 @@
     },
     "The Exorcist": {
         "imdbID": "tt0070047",
-        "Year": 1973,
+        "Year": "1973"
+    },
+    "93": {
+        "imdbID": "tt0070047",
         "Rated": "R",
         "Released": "26 Dec 1973",
         "Runtime": "122",
@@ -1686,7 +2041,10 @@
     },
     "The Farewell": {
         "imdbID": "tt8637428",
-        "Year": 2019,
+        "Year": "2019"
+    },
+    "94": {
+        "imdbID": "tt8637428",
         "Rated": "PG",
         "Released": "09 Aug 2019",
         "Runtime": "100",
@@ -1699,7 +2057,10 @@
     },
     "The French Connection": {
         "imdbID": "tt0067116",
-        "Year": 1971,
+        "Year": "1971"
+    },
+    "103": {
+        "imdbID": "tt0067116",
         "Rated": "R",
         "Released": "09 Oct 1971",
         "Runtime": "104",
@@ -1712,7 +2073,10 @@
     },
     "The General": {
         "imdbID": "tt0017925",
-        "Year": 1926,
+        "Year": "1926"
+    },
+    "108": {
+        "imdbID": "tt0017925",
         "Rated": "Passed",
         "Released": "02 Jan 1927",
         "Runtime": "78",
@@ -1725,7 +2089,10 @@
     },
     "The Godfather": {
         "imdbID": "tt0068646",
-        "Year": 1972,
+        "Year": "1972"
+    },
+    "113": {
+        "imdbID": "tt0068646",
         "Rated": "R",
         "Released": "24 Mar 1972",
         "Runtime": "175",
@@ -1738,7 +2105,10 @@
     },
     "The Good, the Bad and the Ugly": {
         "imdbID": "tt0060196",
-        "Year": 1966,
+        "Year": "1966"
+    },
+    "117": {
+        "imdbID": "tt0060196",
         "Rated": "Approved",
         "Released": "29 Dec 1967",
         "Runtime": "178",
@@ -1751,7 +2121,10 @@
     },
     "The Grand Budapest Hotel": {
         "imdbID": "tt2278388",
-        "Year": 2014,
+        "Year": "2014"
+    },
+    "119": {
+        "imdbID": "tt2278388",
         "Rated": "R",
         "Released": "28 Mar 2014",
         "Runtime": "99",
@@ -1764,7 +2137,10 @@
     },
     "The Grapes of Wrath": {
         "imdbID": "tt0032551",
-        "Year": 1940,
+        "Year": "1940"
+    },
+    "121": {
+        "imdbID": "tt0032551",
         "Rated": "Passed",
         "Released": "15 Mar 1940",
         "Runtime": "129",
@@ -1777,7 +2153,10 @@
     },
     "The Great Escape": {
         "imdbID": "tt0057115",
-        "Year": 1963,
+        "Year": "1963"
+    },
+    "123": {
+        "imdbID": "tt0057115",
         "Rated": "Approved",
         "Released": "04 Jul 1963",
         "Runtime": "172",
@@ -1790,7 +2169,10 @@
     },
     "The Hate U Give": {
         "imdbID": "tt5580266",
-        "Year": 2018,
+        "Year": "2018"
+    },
+    "131": {
+        "imdbID": "tt5580266",
         "Rated": "PG-13",
         "Released": "19 Oct 2018",
         "Runtime": "133",
@@ -1803,7 +2185,10 @@
     },
     "The Hunt": {
         "imdbID": "tt2106476",
-        "Year": 2012,
+        "Year": "2012"
+    },
+    "138": {
+        "imdbID": "tt2106476",
         "Rated": "R",
         "Released": "10 Jan 2013",
         "Runtime": "115",
@@ -1816,7 +2201,10 @@
     },
     "The Iron Giant": {
         "imdbID": "tt0129167",
-        "Year": 1999,
+        "Year": "1999"
+    },
+    "145": {
+        "imdbID": "tt0129167",
         "Rated": "PG",
         "Released": "06 Aug 1999",
         "Runtime": "86",

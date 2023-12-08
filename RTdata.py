@@ -39,6 +39,15 @@ for div in results:
         title_list.append(movie_info)
                 
 # add movie titles, years, and local id to database
+
+# inputs: list of movie tuples (title, year made, rotten tomato score), database connection object, database cursor object
+# outputs: returns the number of movies added to the database
+
+# explanation: add_rt_to_database takes a list of movie tuples and database connection and curser objects and adds 
+# the movie information to a database. First, it creates table "Rotten_Tomatoes" For each movie, it checks if the movie 
+# already exists in the database. If the movie does not exist, it adds the movie to the database and increases the added_count 
+# varibale by one. The process repeats until the added_count variable reaches 25, then the function quits. The function returns 
+# the number of movies added to the database.
 def add_rt_data_to_database(title_list, conn, cur):
     added_count = 0
     cur.execute("CREATE TABLE IF NOT EXISTS Rotten_Tomatoes (title TEXT PRIMARY KEY, id INTEGER, year INTEGER, score INTEGER)")
@@ -61,7 +70,5 @@ def add_rt_data_to_database(title_list, conn, cur):
     conn.commit()
     print(added_count)
     return added_count
-for i in range(6):
-    add_rt_data_to_database(title_list, conn, cur)   
-
+add_rt_data_to_database(title_list, conn, cur)
 

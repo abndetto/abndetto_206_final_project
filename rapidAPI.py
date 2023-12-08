@@ -63,8 +63,16 @@ def create_rapid_api_json(api_key = "21159c5c23msha7c9e5999b522ebp1fc04djsn9fb07
                     }
                     response = requests.get(url, headers=headers, params=querystring)
                     data = json.loads(response.text)
-                    return_dict[data["Title"]] = {"imdbID":None,"Year":None,"Rated":None,"Released":None,"Runtime":None,"Genre":None,"Country":None,"Awards":None,"BoxOffice":None,"imdbRating":None,"Metascore":None}
-                    return_dict[data["Title"]] = {"imdbID":data['imdbID'],"Year":int(data['Year']),"Rated":data['Rated'],"Released":data['Released'],"Runtime":data['Runtime'].split(" ")[0],"Genre":data['Genre'],"Country":data['Country'],"Awards":data['Awards'],"BoxOffice":data['BoxOffice'],'imdbRating':data['imdbRating'],'Metascore':data['Metascore']}
+                    cur.execute('SELECT id FROM Rotten_Tomatoes WHERE title = ?', (data['Title'],))
+                    RiD = cur.fetchone()
+                    print(data['Title'])
+                    print(RiD)
+                    if RiD != None:
+                        RiD = int(RiD[0])
+                        return_dict[RiD] = {"imdbID":None,"Rated":None,"Released":None,"Runtime":None,"Genre":None,"Country":None,"Awards":None,"BoxOffice":None,"imdbRating":None,"Metascore":None}
+                        return_dict[RiD] = {"imdbID":data['imdbID'],"Rated":data['Rated'],"Released":data['Released'],"Runtime":data['Runtime'].split(" ")[0],"Genre":data['Genre'],"Country":data['Country'],"Awards":data['Awards'],"BoxOffice":data['BoxOffice'],'imdbRating':data['imdbRating'],'Metascore':data['Metascore']}
+                    else:
+                        pass
             else:
                 print(f"the search title was {data}. the correct title was {title}")
                 print("Movie not found")
@@ -161,14 +169,14 @@ set_up_types_tables(rapid_api_data, cur, conn)
 # The function then commits the changes to the database and returns None. It prints out the number of added items. 
 def add_rapidapi_data_to_database(movie_dict, conn, cur):
     added_count = 0
-    cur.execute("CREATE TABLE IF NOT EXISTS Rapid_API (title TEXT PRIMARY KEY, id INTEGER, year INTEGER, rated TEXT, released TEXT, runtime INTEGER, genre TEXT, country TEXT, awards TEXT, boxoffice TEXT, imdbRating INTEGER, metascore INTEGER)")
+    cur.execute("CREATE TABLE IF NOT EXISTS Rapid_API (id INTEGER PRIMARY KEY, rated TEXT, released TEXT, runtime INTEGER, genre TEXT, country TEXT, awards TEXT, boxoffice TEXT, imdbRating INTEGER, metascore INTEGER)")
     cur.execute("SELECT MAX(id) FROM Rapid_API")
     last_id = cur.fetchone()[0]
     last_id = 0 if last_id is None else last_id
 
     for title in movie_dict.keys():
-        if "imdbID" in movie_dict[title].keys() and "Year" in movie_dict[title].keys() and "Rated" in movie_dict[title].keys() and "Released" in movie_dict[title].keys() and "Runtime" in movie_dict[title].keys() and "Genre" in movie_dict[title].keys() and "Country" in movie_dict[title].keys() and "Awards" in movie_dict[title].keys() and "BoxOffice" in movie_dict[title].keys() and "imdbRating" in movie_dict[title].keys() and "Metascore" in movie_dict[title].keys():
-            cur.execute("SELECT COUNT(*) FROM Rapid_API WHERE title=?", (title,))
+        if "imdbID" in movie_dict[title].keys() and "Rated" in movie_dict[title].keys() and "Released" in movie_dict[title].keys() and "Runtime" in movie_dict[title].keys() and "Genre" in movie_dict[title].keys() and "Country" in movie_dict[title].keys() and "Awards" in movie_dict[title].keys() and "BoxOffice" in movie_dict[title].keys() and "imdbRating" in movie_dict[title].keys() and "Metascore" in movie_dict[title].keys():
+            cur.execute("SELECT COUNT(*) FROM Rapid_API WHERE id=?", (title,))
             count = cur.fetchone()[0]
 
             if count == 0:
@@ -208,9 +216,8 @@ def add_rapidapi_data_to_database(movie_dict, conn, cur):
                         country = int(country[0])
                 else:
                     pass
-                last_id += 1
                 try:
-                    cur.execute("INSERT INTO Rapid_API (title, id, year, rated, released, runtime, genre, country, awards, boxoffice,imdbRating,metascore) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", (title, last_id, movie_dict[title]['Year'], rating, movie_dict[title]['Released'], movie_dict[title]['Runtime'], genre, country, movie_dict[title]['Awards'], movie_dict[title]['BoxOffice'],movie_dict[title]['imdbRating'],movie_dict[title]['Metascore']))
+                    cur.execute("INSERT INTO Rapid_API (id, rated, released, runtime, genre, country, awards, boxoffice,imdbRating,metascore) VALUES (?,?,?,?,?,?,?,?,?,?)", (title, rating, movie_dict[title]['Released'], movie_dict[title]['Runtime'], genre, country, movie_dict[title]['Awards'], movie_dict[title]['BoxOffice'],movie_dict[title]['imdbRating'],movie_dict[title]['Metascore']))
                     added_count += 1
                 except:
                     KeyError

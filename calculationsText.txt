@@ -1,19 +1,20 @@
 Calculated the average metascore by movie country of origin
                 Metascore
 Country                  
-Australia           67.50
-Austria             95.00
-Brazil              80.00
-Denmark             77.00
-France              69.00
-Germany             68.00
-Hong Kong           85.00
-Italy               83.25
-Japan               79.50
-Spain               87.00
-Taiwan              94.00
-United Kingdom      84.80
-United States       81.50
+Australia       67.500000
+Austria         95.000000
+Brazil          80.000000
+Canada          85.000000
+Denmark         77.000000
+France          69.000000
+Germany         68.000000
+Hong Kong       85.000000
+Italy           83.250000
+Japan           79.500000
+Spain           87.000000
+Taiwan          94.000000
+United Kingdom  83.928571
+United States   81.520408
 Calculated the average metascore by movie genre
            Metascore
 Genre               
@@ -21,8 +22,8 @@ Action     78.153846
 Adventure  80.187500
 Animation  84.400000
 Biography  79.375000
-Comedy     80.000000
-Crime      84.222222
+Comedy     79.514286
+Crime      85.250000
 Drama      86.166667
 Horror     85.500000
 Calculated the number of recommended movies with a RT score equal to or higher than 90 by year
