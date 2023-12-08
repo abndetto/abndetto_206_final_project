@@ -38,7 +38,7 @@ def get_rotten_tomatoes_data_score_over_90(cur):
 # movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_rapid_api_data(cur):
     return_list = []
-    cur.execute('SELECT id, rated, released, runtime, genre, country, awards, boxoffice,imdbRating,metascore FROM Rapid_API')
+    cur.execute('SELECT Rapid_API.id, Rapid_API.rated, Rapid_API.released, Rapid_API.runtime, Genres.genre, Rapid_API.country, Rapid_API.awards, Rapid_API.boxoffice, Rapid_API.imdbRating, Rapid_API.metascore FROM Rapid_API JOIN Genres ON Rapid_API.genre = Genres.id')
     for rval in cur:
         rx = (rval[0], rval[1], rval[2], rval[3], rval[4], rval[5], rval[6], rval[7], rval[8], rval[9])
         return_list.append(rx)
@@ -60,6 +60,21 @@ rapi_metascore = [movie[9] for movie in rapi_data]
 
 rapi_data = {'ID': rapi_id, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore}
 rapi_df = pd.DataFrame(rapi_data)
+rapi_df['Metascore'] = pd.to_numeric(rapi_df['Metascore'], errors='coerce')
+average_metascore_by_genre = rapi_df.groupby('Genre')['Metascore'].mean().reset_index()
+average_metascore_by_genre['Metascore'] = average_metascore_by_genre['Metascore'].round(2)
+
+# Plot the bar graph
+plt.figure(figsize=(10, 6))
+plt.bar(average_metascore_by_genre['Genre'], average_metascore_by_genre['Metascore'], color='skyblue')
+plt.xlabel('Genre')
+plt.ylabel('Average Metascore')
+plt.title('Average Metascore by Genre')
+plt.xticks(rotation=45, ha='right')
+for i, value in enumerate(average_metascore_by_genre['Metascore']):
+    plt.text(i, value + 0.1, str(value), ha='center', va='bottom')
+plt.tight_layout()
+plt.show()
 
 # create rotten tomatoes dataframe 
 rt_data = get_rotten_tomatoes_data_score_over_90(cur)
