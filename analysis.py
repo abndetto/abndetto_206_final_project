@@ -38,9 +38,9 @@ def get_rotten_tomatoes_data_score_over_90(cur):
 # movie title, local id, and year made to a list of tuples. The function returns the list of tuples.
 def get_rapid_api_data(cur):
     return_list = []
-    cur.execute('SELECT Rapid_API.id, Rapid_API.rated, Rapid_API.released, Rapid_API.runtime, Genres.genre, MovieCountries.country, Rapid_API.awards, Rapid_API.boxoffice, Rapid_API.imdbRating, Rapid_API.metascore FROM Rapid_API JOIN Genres ON Rapid_API.genre = Genres.id JOIN MovieCountries ON Rapid_API.country = MovieCountries.id')
+    cur.execute('SELECT Rapid_API.id, Rapid_API.rated, Rapid_API.released, Rapid_API.runtime, Genres.genre, MovieCountries.country, Rapid_API.awards, Rapid_API.boxoffice, Rapid_API.imdbRating, Rapid_API.metascore, Rotten_Tomatoes.year FROM Rapid_API JOIN Genres ON Rapid_API.genre = Genres.id JOIN MovieCountries ON Rapid_API.country = MovieCountries.id JOIN Rotten_Tomatoes ON Rapid_API.id = Rotten_Tomatoes.id')
     for rval in cur:
-        rx = (rval[0], rval[1], rval[2], rval[3], rval[4], rval[5], rval[6], rval[7], rval[8], rval[9])
+        rx = (rval[0], rval[1], rval[2], rval[3], rval[4], rval[5], rval[6], rval[7], rval[8], rval[9], rval[10])
         return_list.append(rx)
         
     return return_list
@@ -57,10 +57,13 @@ rapi_awards = [movie[6] for movie in rapi_data]
 rapi_boxoffice = [movie[7] for movie in rapi_data]
 rapi_imdbRating = [movie[8] for movie in rapi_data]
 rapi_metascore = [movie[9] for movie in rapi_data]
+rapi_year = [movie[10] for movie in rapi_data]
 
-rapi_data = {'ID': rapi_id, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore}
+
+rapi_data = {'ID': rapi_id, 'Rated': rapi_rated, 'Released': rapi_released, 'Runtime': rapi_runtime, 'Genre': rapi_genre, 'Country': rapi_country, 'Awards': rapi_awards, 'Box Office': rapi_boxoffice, 'IMDB Rating': rapi_imdbRating, 'Metascore': rapi_metascore, "Year": rapi_year}
 rapi_df = pd.DataFrame(rapi_data)
 rapi_df['Metascore'] = pd.to_numeric(rapi_df['Metascore'], errors='coerce')
+rapi_df['IMDB Rating'] = pd.to_numeric(rapi_df['IMDB Rating'], errors='coerce')
 
 
 # Graph Average Metascore by Genre
@@ -88,6 +91,18 @@ plt.title('Average Metascore by Country')
 plt.xticks(rotation=45, ha='right')
 for i, value in enumerate(average_metascore_by_country['Metascore']):
     plt.text(i, value + 0.1, str(value), ha='center', va='bottom')
+plt.tight_layout()
+plt.show()
+
+
+
+# Plot average IMDB score by year
+plt.figure(figsize=(10, 6))
+sns.lineplot(x='Year', y='IMDB Rating', data=rapi_df, marker='o', color='blue')
+sns.regplot(x='Year', y='IMDB Rating', data=rapi_df, scatter= False, color='red')
+plt.xlabel('Year')
+plt.ylabel('Average IMDB Score')
+plt.title('Average IMDB Score by Year')
 plt.tight_layout()
 plt.show()
 
