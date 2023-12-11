@@ -106,6 +106,17 @@ plt.title('Average IMDB Score by Year')
 plt.tight_layout()
 plt.show()
 
+# Plot average Metascore score by year
+plt.figure(figsize=(10, 6))
+sns.lineplot(x='Year', y='Metascore', data=rapi_df, marker='o', color='blue')
+sns.regplot(x='Year', y='Metascore', data=rapi_df, scatter= False, color='red')
+plt.xlabel('Year')
+plt.ylabel('Average Metascore')
+plt.title('Average Metascore by Year')
+plt.tight_layout()
+plt.show()
+
+
 # create rotten tomatoes dataframe 
 rt_data = get_rotten_tomatoes_data_score_over_90(cur)
 
@@ -176,22 +187,6 @@ def get_measurements_and_countries(cur):
     cc_df = cc_df.dropna(subset=['Metascore'])
     avg_metascore_by_country = cc_df.groupby('Country').mean()
     return avg_metascore_by_country
-
-# plt.figure(figsize=(10, 6))
-# plt.bar(get_measurements_and_countries(cur).index, get_measurements_and_countries(cur).values, color='green')
-# plt.xlabel('Country of Origin')
-# plt.ylabel('Metascore')
-# plt.title('Average Metascore by Country')
-# plt.grid(axis='y')
-# plt.show()
-
-# plt.figure(figsize=(10, 6))
-# plt.bar(get_measurements_and_genres(cur).index, get_measurements_and_genres(cur).values, color='green')
-# plt.xlabel('Movie Genre')
-# plt.ylabel('Number of Movies')
-# plt.title('Average Metascore by Genre')
-# plt.grid(axis='y')
-# plt.show()
 
 # with open('calculated_data_text.txt', 'w') as file:
 x = get_measurements_and_countries(cur)
