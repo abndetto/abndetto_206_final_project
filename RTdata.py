@@ -70,5 +70,7 @@ def add_rt_data_to_database(title_list, conn, cur):
     conn.commit()
     print(added_count)
     return added_count
+
+# add Rotten Tomatoes data to database
 add_rt_data_to_database(title_list, conn, cur)
 
